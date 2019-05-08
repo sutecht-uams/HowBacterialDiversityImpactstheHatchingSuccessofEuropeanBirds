@@ -38,7 +38,7 @@ Before filtering there were 3,000 OTUs. After final filtering was complete I had
 ## Results
 The ratios of common bacterial taxa are similar between species regardless of their hatching success rates. Bacterial diversity only has an effect on hatching success if rare taxa are taken into account.
 
-[SVG of hacthing success rate by species]()
+[SVG of bacterial diversity by host bird species](https://github.com/sutecht-uams/HowBacterialDiversityImpactstheHatchingSuccessofEuropeanBirds/blob/master/hpc/images/level-2-bars(2).svg)
 
 ## Discussion
 
