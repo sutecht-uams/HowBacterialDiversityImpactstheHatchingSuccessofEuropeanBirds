@@ -10,7 +10,7 @@ Certain bacterial taxa will have higher appearance rates in clutches with lower 
 
 ## Introduction
 
-16S rRNA Sequence data was obtained from the EBI from the paper [“Bacterial density rather than diversity correlates with hatching success across different avian species”](https://qiita.ucsd.edu/study/description/1632#).
+16S rRNA Sequence data was obtained from the ENA from the paper [“Bacterial density rather than diversity correlates with hatching success across different avian species”](https://academic.oup.com/femsec/article/94/3/fiy022/4847879).
 
 The authors monitored 600 nest boxes and several wild nests and swabbed the eggs at the start of incubation and after the clutch was completed. Any data from nests where no eggs hatched was thrown out in case of parental abandonment.
 
@@ -21,13 +21,15 @@ The final dataset included 157 clutches from 17 bird species.
 ##### Imported into QIIME2
 Sequence data was first obtained from [Qiita](https://qiita.ucsd.edu/study/description/1632#). A subset of the data was run through several steps of the process to help formalize the planned pipeline. In this process I gained a better understanding of Qiime2 and its data types. The Qiita repository included an extremely useful graphic that helped show the pipeline the authors ran through and highlighted many of their parameters that would be used. When looking at Qiita data I ran into several issues because the data was not demultplexed, but many attempts to demultiplex according to the papers instructions and the moving picture tutorial guidelines failed. In the final process data that was already demultiplexed was used. 
 
-After the trial run had worked out the kinks in the planned pipeline, demultiplexed sequence data was downloaded from the [Eureopean Nucleotide Archive](https://www.ebi.ac.uk/ena/data/view/PRJEB14786) onto the UAMS HPC. Data was then imported into Qiime2 2019. The original study used Qiime v1.9, so this is this first step makes this a reproduction of methods rather than a pure replication.
+After the trial run had worked out the kinks in the planned pipeline, demultiplexed sequence data was downloaded from the [Eureopean Nucleotide Archive](https://www.ebi.ac.uk/ena/data/view/PRJEB14786) onto the UAMS HPC. Data was then imported into Qiime2 v2019.1. The original study used Qiime v1.9, so this is this first step makes this a reproduction of methods rather than a pure replication.
 
 ##### Deblur Trim Length 100
 After data was imported the Deblur tool was used for quality filtering. The trim length was chosen by what the authors has specified in the Qiita pipeline as 100. For easier reproduction this should have also been listed in the paper, but was not. 
 
 ##### Closed Reference OTU picking (Greengenes)
 Next Closed Reference OTU picking was preformed with greengenes. This was based off data in the project page on Qiita. The paper actually claimed they used Open Reference OTU picking with greengenes v10_13. However Qiita specifically listed closed reference.I downloaded the greengenes fileset from and imported the files in to QIIME2 and then these files were used for Closed Reference Picking.
+
+At this point data was transferred to another machine, running QIIME2 v2018.11.
 
 #### Filtered mitochondria, archaea, and low frequency OTUs
 Next the Archea, Chloroplasts, Mitochondria, and low frequency OTUs were removed. QIIME included a way to remove specfic taxa with just the parameters of archea, chloroplasts, and mitochondria, however for OTU frequency a parameter needed to be chosen. The paper specified the frequency they removed was .005% and under of total OTU frequency. To calculate this for my remaining dataset I looked at the visualization of the data to get the total frequency and multiplied by .00005 for the frequency to drop. 
@@ -112,4 +114,15 @@ Tree after Archea/Mitochondria/Chloroplasts are removed
 [Tree at ITOL](https://itol.embl.de/tree/1443035150384711557020271) 
 ![alt text](/hpc/images/pid-zieN1CQ3V--4RsaC9w.png "Tree")
 
+### References (WIP)
+
+Final bibliography to be added later.
+
+* Juan Manuel Peralta-Sánchez Antonio Manuel Martín-Platero Laura Wegener-Parfrey Manuel Martínez-Bueno Sonia Rodríguez-Ruano José Antonio Navas-Molina Yoshiki Vázquez-Baeza David Martín-Gálvez Manuel Martín-Vivaldi Juan Diego Ibáñez-Álamo Rob Knight Juan José Soler   FEMS Microbiology Ecology, Volume 94, Issue 3, March 2018, fiy022, https://doi.org/10.1093/femsec/fiy022 [link](https://academic.oup.com/femsec/article/94/3/fiy022/4847879)
+
+* QIIME2 https://peerj.com/preprints/27295/ 
+
+* Catherine Lozupone, Rob Knight UniFrac: a New Phylogenetic Method for Comparing Microbial Communities https://aem.asm.org/content/71/12/8228
+
+*	Tree Of Life v1.0 (Ciccarelli FD, et al., Science.; 2006 Mar 3. 311(5765): 1283-7)
 
