@@ -80,19 +80,27 @@ The above SVG was broken down by species in Inkspace, and hatching succes number
 
 * Unweighted Unifrac by Spieces
 ![alt text](/hpc/images/UU/list1.png "Bird Spieces")
+![alt text](/hpc/images/UU/list2.png "Bird Spieces")
 ![alt text](/hpc/images/UU/UnWeightedSpeices.png "UnWeighted Unifrac by Spieces")
 
 * Unweighted Unifrac by Hatching Success
-![alt text](/hpc/images/UU/list2.png "Bacterial Taxa")
 ![alt text](/hpc/images/UU/UnWeightedUFHatchingSuccess.png "UnWeighted Unifrac by Hatching Success")
 
 * Weighted Unifrac by Spieces
 ![alt text](/hpc/images/WU/specieslabelWU1.png "Bird Spieces")
+![alt text](/hpc/images/WU/specieslabelWU2.png "Bird Spieces")
 ![alt text](/hpc/images/WU/WeightedUniFracHatchingSuccess_withNulls_removed.png "Weighted Unifrac by Spieces")
 
 * Weighted Unifrac by Hatching Success
-![alt text](/hpc/images/WU/specieslabelWU2.png "Bacterial Taxa")
 ![alt text](/hpc/images/WU/WeightedUniFracSpecies.png "Weighted Unifrac by Hatching Success")
+
+Tree before Archea/Mitochondria/Chloroplasts are removed
+[Tree at ITOL](https://itol.embl.de/tree/991976123347171557017399) 
+![alt text](hpc/output/results/uD8XuRbmBQ-xS-Xcyu3ieg.png "Tree")
+
+Tree after Archea/Mitochondria/Chloroplasts are removed
+[Tree at ITOL](https://itol.embl.de/tree/1443035150384711557020271) 
+![alt text](hpc/images/uD8XuRbmBQ-xS-Xcyu3ieg.png.png "Tree")
 
 ## Discussion
 
