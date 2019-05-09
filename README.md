@@ -35,8 +35,17 @@ Next the Archea, Chloroplasts, Mitochondria, and low frequency OTUs were removed
 ##### Align to tree  Core Metrics     Taxa Barplot
 Before filtering there were 3,000 OTUs. After final filtering was complete I had ~800 OTUs remaining, compared to the original authors ~500 OTUs. It was a larger gap than I had hoped for, but not unuseable. For final analyze I aligned the data to a tree, created PCoA plots with the core metrics command, and created a taxonomic barchart. 
 
-## Results
+## Results Text
 The ratios of common bacterial taxa are similar between species regardless of their hatching success rates. Bacterial diversity only has an effect on hatching success if rare taxa are taken into account.
+
+## Discussion
+
+* Research with negative results or small effect sizes can still contribute to the field. 
+* Reproducibility should always be a major focus in scientific papers. 
+
+The results here are of a small effect size, in fact even though the original paper outlines the sequencing methods in detail, it focuses more heavily on the results of the culturing methods. However, in science even negative results deserve to be considered, as focusing only on the positive is harmul for the scientific community. It removes the search for truth and knowledge instead searching for popularity and money. Even though the effect and results are small, the detailing of sequencing metholodgy shows great value and encourages reproduction. Therefore in this study I have worked to ensure my methods are well described, since a focus on reproduction allows a paper to benefit all of science and health, not just a particular niche or subfield. 
+
+## Results Images
 
 [SVG of bacterial diversity by host bird species](https://github.com/sutecht-uams/HowBacterialDiversityImpactstheHatchingSuccessofEuropeanBirds/blob/master/hpc/images/level-2-bars(2).svg)
 
@@ -78,34 +87,28 @@ The above SVG was broken down by species in Inkspace, and hatching succes number
 * Upupa epops 82.3% Hatching Success
 ![alt text](/hpc/images/Upupa_epops_82_3.png "Upupa epops 82.3% Hatching Success")
 
-* Unweighted Unifrac by Spieces
-![alt text](/hpc/images/UU/list1.png "Bird Spieces")
-![alt text](/hpc/images/UU/list2.png "Bird Spieces")
-![alt text](/hpc/images/UU/UnWeightedSpeices.png "UnWeighted Unifrac by Spieces")
-
 * Unweighted Unifrac by Hatching Success
 ![alt text](/hpc/images/UU/UnWeightedUFHatchingSuccess.png "UnWeighted Unifrac by Hatching Success")
-
-* Weighted Unifrac by Spieces
-![alt text](/hpc/images/WU/specieslabelWU1.png "Bird Spieces")
-![alt text](/hpc/images/WU/specieslabelWU2.png "Bird Spieces")
-![alt text](/hpc/images/WU/WeightedUniFracSpecies.png "Weighted Unifrac by Spieces")
 
 * Weighted Unifrac by Hatching Success
 ![alt text](/hpc/images/WU/WeightedUniFracHatchingSuccess_withNulls_removed.png "Weighted Unifrac by Hatching Success")
 
+* Unweighted Unifrac by Spieces
+ ![alt text](/hpc/images/UU/list1.png "Bird Spieces")
+![alt text](/hpc/images/UU/list2.png "Bird Spieces")
+![alt text](/hpc/images/UU/UnWeightedSpeices.png "UnWeighted Unifrac by Spieces")
+
+* Weighted Unifrac by Spieces
+![alt text](/hpc/images/WU/speiceslabelWU1.png "Bird Spieces")
+![alt text](/hpc/images/WU/specieslabelWU2.png "Bird Spieces")
+![alt text](/hpc/images/WU/WeightedUniFracSpecies.png "Weighted Unifrac by Spieces")
+
 Tree before Archea/Mitochondria/Chloroplasts are removed
 [Tree at ITOL](https://itol.embl.de/tree/991976123347171557017399) 
-![alt text](/hpc/oimages/P5-B6R1OKpvN-o3fvtUm1A.png "Tree")
+![alt text](/hpc/images/P5-B6R1OKpvN-o3fvtUm1A.png "Tree")
 
 Tree after Archea/Mitochondria/Chloroplasts are removed
 [Tree at ITOL](https://itol.embl.de/tree/1443035150384711557020271) 
 ![alt text](/hpc/images/uD8XuRbmBQ-xS-Xcyu3ieg.png "Tree")
 
-## Discussion
-
-* Research with negative results or small effect sizes can still contribute to the field. 
-* Reproducibility should always be a major focus in scientific papers. 
-
-The results here are of a small effect size, in fact even though the original paper outlines the sequencing methods in detail, it focuses more heavily on the results of the culturing methods. However, in science even negative results deserve to be considered, as focusing only on the positive is harmul for the scientific community. It removes the search for truth and knowledge instead searching for popularity and money. Even though the effect and results are small, the detailing of sequencing metholodgy shows great value and encourages reproduction. Therefore in this study I have worked to ensure my methods are well described, since a focus on reproduction allows a paper to benefit all of science and health, not just a particular niche or subfield. 
 
