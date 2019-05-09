@@ -96,16 +96,13 @@ The above SVG was broken down by species in Inkspace, and hatching succes number
 * Unweighted Unifrac by Spieces
  ![alt text](/hpc/images/UU/UnWeightedSpeices.png "UnWeighted Unifrac by Spieces")
 
- ![alt text](/hpc/images/UU/list1.png =250y"Bird Spieces")
-![alt text](/hpc/images/UU/list2.png =250y "Bird Spieces")
+<img src="/hpc/images/UU/list1.png" height="400"><img src="/hpc/images/UU/list2.png" height="300">
 
 
 * Weighted Unifrac by Spieces
  ![alt text](/hpc/images/WU/WeightedUniFracSpecies.png "Weighted Unifrac by Spieces")
- 
- ![alt text](/hpc/images/WU/speiceslabelWU1.png =250y "Bird Spieces")
-![alt text](/hpc/images/WU/specieslabelWU2.png =250y "Bird Spieces")
 
+<img src="/hpc/images/WU/speiceslabelWU1.png" height="400"><img src="/hpc/images/WU/specieslabelWU2.png" height="300">
 
 Tree before Archea/Mitochondria/Chloroplasts are removed
 [Tree at ITOL](https://itol.embl.de/tree/991976123347171557017399) 
