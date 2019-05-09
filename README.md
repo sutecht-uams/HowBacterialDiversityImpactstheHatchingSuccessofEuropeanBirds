@@ -40,7 +40,61 @@ The ratios of common bacterial taxa are similar between species regardless of th
 
 [SVG of bacterial diversity by host bird species](https://github.com/sutecht-uams/HowBacterialDiversityImpactstheHatchingSuccessofEuropeanBirds/blob/master/hpc/images/level-2-bars(2).svg)
 
+The above SVG was broken down by species in Inkspace, and hatching succes numbers were provided by the original paper.
+Bacteria Species
+![alt text](/hpc/images/level-2-legend(2).png "Bacteria Species")
+Athene_noctua 100.0% Hatching Success
+![alt text](/hpc/images/Athene_noctua_100_0.png "Athene_noctua 100.0% Hatching Success")
+Falco tinnunculus 100.0% Hatching Success
+![alt text](/hpc/images/Falco_tinnunculus_100_0.png "Falco tinnunculus 100.0% Hatching Success")
+Columbia livia 99.2% Hatching Success
+![alt text](/hpc/images/Columbia_livia_99_2.png "Columbia livia 99.2% Hatching Success")
+Otus scops 98.6% Hatching Success
+![alt text](/hpc/images/Otus_scops_98_6.png "Otus scops 98.6% Hatching Success")
+Coracias garrulus 97.5% Hatching Success
+![alt text](/hpc/images/Coracias_garrulus_97_5.png "Coracias garrulus 97.5% Hatching Success")
+Parus major 96.4% Hatching Success
+![alt text](/hpc/images/Parus_major_96_4.png "Parus major 96.4% Hatching Success")
+Serinus serinus 95.7% Hatching Success
+![alt text](/hpc/images/Serinus_serinus_95.7.png "Serinus serinus 95.7% Hatching Success")
+Passer montanus 95.2% Hatching Success
+![alt text](/hpc/images/Passer_montanus_95_2.png "Passer montanus 95.2% Hatching Success")
+Hirundo rustica 95.0% Hatching Success
+![alt text](/hpc/images/Hirundo_rustica_95_0.png "Hirundo rustica 95.0% Hatching Success")
+Corvusmonedula 94.8% Hatching Success
+![alt text](/hpc/images/Corvus_monedula_94_8.png "Corvusmonedula 94.8% Hatching Success")
+Oenathe_leucura 93.7% Hatching Success
+![alt text](/hpc/images/Oenathe_leucura_93_7.png "Oenathe_leucura 93.7% Hatching Success")
+Pica pica 92.0% Hatching Success
+![alt text](/hpc/images/Pica_pica_92_0.png "Pica pica 92.0% Hatching Success")
+Sturnus unicolor 91.3% Hatching Success
+![alt text](/hpc/images/Sturnus_unicolor_91_3.png "Sturnus unicolor 91.3% Hatching Success")
+Lanius meridionalis 91.2% Hatching Success
+![alt text](/hpc/images/Lanius_meridionalis_91_2.png "Lanius meridionalis 91.2% Hatching Success")
+Pyrrhocorax pyrrhocorax 90.4% Hatching Success
+![alt text](/hpc/images/Pyrrhocorax_pyrrhocorax_90_4.png "Pyrrhocorax pyrrhocorax 90.4% Hatching Success")
+Turdus merula 89.2% Hatching Success
+![alt text](/hpc/images/Turdus_merula_89_2.png "Turdus merula 89.2% Hatching Success")
+Upupa epops 82.3% Hatching Success
+![alt text](/hpc/images/Upupa_epops_82_3.png "Upupa epops 82.3% Hatching Success")
+
+Unweighted Unifrac by Spieces
+![alt text](/hpc/images/UU/"Screen Shot 2019-05-06 at 1.23.17 PM" "Bird Spieces")
+![alt text](/hpc/images/UU/UnWeightedSpeices.png "UnWeighted Unifrac by Spieces")
+
+Unweighted Unifrac by Hatching Success
+![alt text](/hpc/images/UU/"SScreen Shot 2019-05-06 at 1.23.27 PM" "Bacterial Taxa")
+![alt text](/hpc/images/UU/"UnWeightedUFHat chingSuccess" "UnWeighted Unifrac by Hatching Success")
+
+Weighted Unifrac by Spieces
+![alt text](/hpc/images/WU/"Screen Shot 2019-05-06 at 1.23.17 PM" "Bird Spieces")
+![alt text](/hpc/images/WU/WeightedUniFracHatchingSuccess_withNulls_removed "Weighted Unifrac by Spieces")
+
+Weighted Unifrac by Hatching Success
+![alt text](/hpc/images/WU/specieslabelWU2.png "Bacterial Taxa")
+![alt text](/hpc/images/WU/WeightedUniFracSpecies "Weighted Unifrac by Hatching Success")
 ## Discussion
+
 
 Research with negative results or small effect sizes can still contribute to the field. 
 Reproducibility should always be a major focus in scientific papers. 
