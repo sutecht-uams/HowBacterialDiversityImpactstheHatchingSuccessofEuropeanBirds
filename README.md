@@ -41,7 +41,7 @@ Before filtering there were 3,000 OTUs. After final filtering was complete I had
 A  box and whisker visualization of hatching success was created based on Unweighted Unifrac data form the core metric output.
 
 ## Results Text
-The ratios of common bacterial taxa are similar between species regardless of their hatching success rates. Bacterial diversity only has an effect on hatching success if rare taxa are taken into account.
+The ratios of common bacterial taxa are similar between species regardless of their hatching success rates.
 
 ## Discussion
 
