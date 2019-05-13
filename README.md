@@ -21,10 +21,10 @@ The final dataset included 157 clutches from 17 bird species.
 ##### Imported into QIIME2
 Sequence data was first obtained from [Qiita](https://qiita.ucsd.edu/study/description/1632#). A subset of the data was run through several steps of the process to help formalize the planned pipeline. In this process I gained a better understanding of Qiime2 and its data types. The Qiita repository included an extremely useful graphic that helped show the pipeline the authors ran through and highlighted many of their parameters that would be used. When looking at Qiita data I ran into several issues because the data was not demultplexed, but many attempts to demultiplex according to the papers instructions and the moving picture tutorial guidelines failed. In the final process data that was already demultiplexed was used. 
 
-After the trial run had worked out the kinks in the planned pipeline, demultiplexed sequence data was downloaded from the [Eureopean Nucleotide Archive](https://www.ebi.ac.uk/ena/data/view/PRJEB14786) onto the UAMS HPC. Data was then imported into Qiime2 v2019.1. The original study used Qiime v1.9, so this is this first step makes this a reproduction of methods rather than a pure replication.
+After the trial run had worked out the kinks in the planned pipeline, demultiplexed sequence data was downloaded from the [Eureopean Nucleotide Archive](https://www.ebi.ac.uk/ena/data/view/PRJEB14786) onto the UAMS HPC. Data was then imported into Qiime2 v2019.1. 
 
 ##### Deblur Trim Length 100
-After data was imported the Deblur tool was used for quality filtering. The trim length was chosen by what the authors has specified in the Qiita pipeline as 100. For easier reproduction this should have also been listed in the paper, but was not. 
+After data was imported the Deblur tool was used for quality filtering. The trim length was chosen by what the authors has specified in the Qiita pipeline as 100. 
 
 ##### Closed Reference OTU picking (Greengenes)
 Next Closed Reference OTU picking was preformed with greengenes. This was based off data in the project page on Qiita. The paper actually claimed they used Open Reference OTU picking with greengenes v10_13. However Qiita specifically listed closed reference.I downloaded the greengenes fileset from and imported the files in to QIIME2 and then these files were used for Closed Reference Picking.
@@ -48,7 +48,7 @@ The ratios of common bacterial taxa are similar between species regardless of th
 * Research with negative results or small effect sizes can still contribute to the field. 
 * Reproducibility should always be a major focus in scientific papers. 
 
-The results here are of a small effect size, in fact even though the original paper outlines the sequencing methods in detail, it focuses more heavily on the results of the culturing methods. However, in science even negative results deserve to be considered, as focusing only on the positive is harmul for the scientific community. It removes the search for truth and knowledge instead searching for popularity and money. Even though the effect and results are small, the detailing of sequencing metholodgy shows great value and encourages reproduction. Therefore in this study I have worked to ensure my methods are well described, since a focus on reproduction allows a paper to benefit all of science and health, not just a particular niche or subfield. 
+The results here are of a small effect size, in fact even though the original paper outlines the sequencing methods in detail, it focuses more heavily on the results of the culturing methods. However, in science even negative results deserve to be considered, as focusing only on the positive is harmul for the scientific community. It removes the search for truth and knowledge instead searching for popularity and publishing power. Even though the effect and results are small, the detailing of sequencing metholodgy shows great value and encourages reproduction. Therefore in this study I have worked to ensure my methods are well described, since a focus on reproduction allows a paper to benefit all of science and health, not just a particular niche or subfield. 
 
 ## Results Images
 
@@ -121,8 +121,6 @@ Tree after Archea/Mitochondria/Chloroplasts are removed
 
 ### References (WIP)
 
-Final bibliography to be added later.
-
 * Juan Manuel Peralta-Sánchez Antonio Manuel Martín-Platero Laura Wegener-Parfrey Manuel Martínez-Bueno Sonia Rodríguez-Ruano José Antonio Navas-Molina Yoshiki Vázquez-Baeza David Martín-Gálvez Manuel Martín-Vivaldi Juan Diego Ibáñez-Álamo Rob Knight Juan José Soler   FEMS Microbiology Ecology, Volume 94, Issue 3, March 2018, fiy022, https://doi.org/10.1093/femsec/fiy022 [link](https://academic.oup.com/femsec/article/94/3/fiy022/4847879)
 
 * QIIME2 https://peerj.com/preprints/27295/ 
@@ -132,3 +130,6 @@ Final bibliography to be added later.
 *	Tree Of Life v1.0 (Ciccarelli FD, et al., Science.; 2006 Mar 3. 311(5765): 1283-7)
 
 * ENA https://www.ebi.ac.uk/ena/data/view/PRJEB14786 ERP016455
+
+
+
