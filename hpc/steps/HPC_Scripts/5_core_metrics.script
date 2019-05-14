@@ -1,0 +1,21 @@
+#!/bin/bash
+#PBS -k o
+#PBS -M USEREMAIL
+#PBS -m abe
+#PHS -N birds_core_metrics
+#PBS -j oe
+#PBS -d USERDIRECTORY
+#PBS -l walltime=12:00:00,nodes=1:ppn=36,feature=xeon
+
+module load EasyBuild
+module load QIIME2
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+qiime diversity core-metrics-phylogenetic \
+  --i-phylogeny filtered-rooted-tree.qza \
+  --i-table filtered-table.qza \
+  --p-sampling-depth 10569 \
+  --p-n-jobs 36 \
+  --m-metadata-file mapping.tsv \
+  --output-dir core-metrics-results

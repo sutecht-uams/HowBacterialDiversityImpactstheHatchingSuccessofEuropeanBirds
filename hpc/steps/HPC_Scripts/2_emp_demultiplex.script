@@ -1,0 +1,19 @@
+#!/bin/bash
+#PBS -k o
+#PBS -M USEREMAIL
+#PBS -m abe
+#PHS -N bird_demux_emp
+#PBS -j oe
+#PBS -d USERDIRECTORY
+#PBS -l walltime=05:00:00,nodes=1:ppn=36,feature=xeon
+
+module load EasyBuild
+module load QIIME2
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+qiime demux emp-single \
+  --i-seqs emp-sequences.qza \
+  --m-barcodes-file emp-barcodes.tsv \
+  --m-barcodes-column BarcodeSequence \
+  --o-per-sample-sequences demux-emp.qza
