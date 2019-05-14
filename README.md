@@ -121,15 +121,45 @@ Tree after Archea/Mitochondria/Chloroplasts are removed
 
 ### References (WIP)
 
-* Juan Manuel Peralta-Sánchez Antonio Manuel Martín-Platero Laura Wegener-Parfrey Manuel Martínez-Bueno Sonia Rodríguez-Ruano José Antonio Navas-Molina Yoshiki Vázquez-Baeza David Martín-Gálvez Manuel Martín-Vivaldi Juan Diego Ibáñez-Álamo Rob Knight Juan José Soler   FEMS Microbiology Ecology, Volume 94, Issue 3, March 2018, fiy022, https://doi.org/10.1093/femsec/fiy022 [link](https://academic.oup.com/femsec/article/94/3/fiy022/4847879)
+#### Annotated Bibliography
+1.  Peralta-Sánchez et al. “Bacterial density rather than diversity correlates with hatching success across different avian species” FEMS Microbiology Ecology, 2018, Vol. 94, Issue 3.
 
-* QIIME2 https://peerj.com/preprints/27295/ 
-
-* Catherine Lozupone, Rob Knight UniFrac: a New Phylogenetic Method for Comparing Microbial Communities https://aem.asm.org/content/71/12/8228
-
-*	Tree Of Life v1.0 (Ciccarelli FD, et al., Science.; 2006 Mar 3. 311(5765): 1283-7)
-
-* ENA https://www.ebi.ac.uk/ena/data/view/PRJEB14786 ERP016455
+The authors investigated whether bacterial density and bacterial assembly influenced the hatching success of wild birds in the Hoya de Guadix plateau of Spain.  Nests were visited daily and swabs were gathered at the beginning of incubation and after hatching was complete. The length and width off each egg was measured with a caliper after swabbing. The collected swabs were used for culturing in agar plates which were used to estimate the bacterial density. Fingerprinting was performed with ARISA and 16s rRNA sequencing was performed with HiSeq Illumina which were used to study bacterial community assembly. They found from the culturing that density was negatively correlated with hatching success. However, the sequencing data did not show a strong correlation with hatching success. They noted some differences in the Unweighted and Weighted UniFrac data they they theorized could potentially mean that rare taxa had a small effect.
 
 
+2. Leinonen, Rasko et al. “The European Nucleotide Archive” Nucleic Acids Research, 2011, Vol. 39, Database issue, D28–D31
+
+The European Nucleotide Archive is a publicly available database of nucleotide sequences and part of the International Nucleotide Sequence Database Collaboration along with GenBank and the DNA Databank of Japan. It contains the Sequence Read Archive, the Trace Archive, and the EMBL-Bank. The EMBL-Bank and SRA both allow the public to submit data, and many improvements to how data can be submitted are covered in this paper. Data can be downloaded in several formats including xml and fastq files. Data can be searched and even downloaded in bulk with FTP. This is a very useful tool and it is fantastic that the researchers and employees at the European Bioinformatics Institute made this archive a reality.
+
+3. Collins, Francis and Tabak, Lawrence. NIH plans to enhance reproducibility. Nature, 2014, vol. 505, pp. 612-613.    
+
+Scientific research, and biomedical research especially, are going through a crises and more and more published papers are impossible to reproduce. The NIH believes this is not due to any purposeful misconduct but due to a variety of problems in the community such as tenure rewards, focus on high impact journals, hiding information from competition, poor study design, and more. Since reproducibility is such a core part of science, the community must improve. NIH lays out its current plans for improvement in this paper. Improvements to mandatory training, new reviewer checklists, and a dedicated "scientific premise" reviewer are currently being piloted. NIH is also working to setup a data repository where data can be shared even if it is not associated with a published paper. NIH also encourages journals to be more open to negative data and correction papers.
+
+4. Ravel, Jacques and Wommack, K Eric. All hail reproducibility in microbiome research. Microbiome, 2014, 2:8  
+
+The Editor in Chief and another editor of the journal Microbiome present their stance on reproducibility of research. They believe that the journals themselves are the key to ensuring published papers have data sets available. They provide a detailed list of useful tools and sites that researches can use including SRA, dbGAP, FigShare, Github, and iPython Notebooks, as well recommending a previous paper as an example of correct datasharing. While the named tools are well explained, it might have been more helpful if the authors had included them in a table or sidebar. With this method researchers looking for new tools could quickly reference the list, and more options could be included without bogging down the narrative. The paper ends with the declaration that Microbiome intends to ask authors to provide accessible data, but does not detail if this will be an actual requirement or simply an option that researches can easily decline.
+
+5. Gonzalez, Antonio et al. “Qiita: rapid, web-enabled microbiome meta-analysis” Nature Methods, 2018, Vol. 15, pp 796-798
+
+Qiita is a web based platform that not only stores sequence data, but stores it in the rawest form possible along with all the steps and parameters used to get from raw data to final analysis. The goal of the platform is to allow users that are not bioinformaticians to perform metanalyses on data using pipelines like QIIME2. Qiita automatically deposits data to the ENA as well. By accepting only the rawest form of data, Qiita is ensuring the data can be reused with new analytic technologies as they are created. Studies with high quality metadata are labeled as Gold studies, in order to encourage users to aim for high quality in their work as well. The lead author on the work is a programmer, so we can have confidence the backend technology is sound and well supported. Qiita is a very useful platform for new researchers and veterans alike.
+
+6. Boylen, Evan et al. “QIIME 2: Reproducible, interactive, scalable, and extensible microbiome data science” PeerJ Preprints 6:e27295v2 
+
+QIIME 2 is the successor to QIIME, moving the microbial analytic pipeline platform forward and allowing new technology and opportunity. To allow for growth in technologies, QIIME2 is based around plugins. Various implementations of denoising, taxanomic alignment, and more are available as plugins and can be updated or replaced easily as new algorithms are developed. In addition, QIIME2 provides interactive visualizations with provenance tracking. QIIME2 also works to be accessible to users from various backgrounds and is free and open source. Its design aimed for the future, long list of high profile authors, and most importantly the success of its predecessor QIMME gives confidence that QIIME2 will be a fantastic resource for the field.
+
+
+
+7. Caporaso, Gregory et al. “QIIME allows analysis of high-throughput community sequencing data” Nature Methods, 2010, Vol. 7, Issue 5. Pp335-336
+
+QIIME, quantitative insights into microbial ecology, is a tool that allows users to work through an entire analysis pipeline. As new sequencing technology increases the size of datasets, the authors found they could not find tools that offered a library for demultiplexing, a library for taxonomy assignment, and a set of analytic tools for continuing with the data. Using PyCogent they created the QIIME platform. It is built to be modular so that functions can be added over time. They then tested the tool on a new twin study to verify it. Written by a group of experts in the field, we know QIIME was a useful tool until its successor QIIME2 was created. 
+
+#### Annotation References
+
+ * Google Scholar https://scholar.google.com/
+ 
+ *  Editorial Board. Microbiome. https://microbiomejournal.biomedcentral.com/about/editorial-board
+
+ *  Antonio González Peña. About my research. https://sites.google.com/site/antgonza/
+
+ * Catherine Lozupone PhD “School of Medicine Biomedical Informatics and Personalized Medicine” University of Colorado Anshutz Campus http://www.ucdenver.edu/academics/colleges/medicalschool/departments/medicine/BIPM/Faculty/Pages/Catherine-Lozupone,-PhD.aspx
 
