@@ -148,18 +148,64 @@ Qiita is a web based platform that not only stores sequence data, but stores it 
 QIIME 2 is the successor to QIIME, moving the microbial analytic pipeline platform forward and allowing new technology and opportunity. To allow for growth in technologies, QIIME2 is based around plugins. Various implementations of denoising, taxanomic alignment, and more are available as plugins and can be updated or replaced easily as new algorithms are developed. In addition, QIIME2 provides interactive visualizations with provenance tracking. QIIME2 also works to be accessible to users from various backgrounds and is free and open source. Its design aimed for the future, long list of high profile authors, and most importantly the success of its predecessor QIMME gives confidence that QIIME2 will be a fantastic resource for the field.
 
 
-
 7. Caporaso, Gregory et al. “QIIME allows analysis of high-throughput community sequencing data” Nature Methods, 2010, Vol. 7, Issue 5. Pp335-336
 
 QIIME, quantitative insights into microbial ecology, is a tool that allows users to work through an entire analysis pipeline. As new sequencing technology increases the size of datasets, the authors found they could not find tools that offered a library for demultiplexing, a library for taxonomy assignment, and a set of analytic tools for continuing with the data. Using PyCogent they created the QIIME platform. It is built to be modular so that functions can be added over time. They then tested the tool on a new twin study to verify it. Written by a group of experts in the field, we know QIIME was a useful tool until its successor QIIME2 was created. 
 
-#### Annotation References
+8. Amir, Amnon et al. “Deblur Rapidly Resolves Single-Nucleotide Community Sequence Patterns” mSystems,2017, Vol. 2, Issue 2, e00191-16;
 
- * Google Scholar https://scholar.google.com/
- 
- *  Editorial Board. Microbiome. https://microbiomejournal.biomedcentral.com/about/editorial-board
+DeBlur is a tool for denoising datasets, or removing error sequences. To do this it uses a sub-Operational-Taxanomic-Unit approach, similar to other popular algorithms DADA2 and UNOISE2. Unlike those tools DeBlur can be more easily parallelized because it operates on every sample independently. The algorithm first sorts the sequences by abundance, then subtracts the predicted error number from neighbors based on Hamming distance. If a sequence’s abundance drops to 0, it is removed as likely an error.  
 
- *  Antonio González Peña. About my research. https://sites.google.com/site/antgonza/
+9. Callahan, Benjamin et al. “DADA2: High-resolution sample inference from Illumina amplicon data” Nature Methods, 2016, Vol. 13, pp 581-583
 
- * Catherine Lozupone PhD “School of Medicine Biomedical Informatics and Personalized Medicine” University of Colorado Anshutz Campus http://www.ucdenver.edu/academics/colleges/medicalschool/departments/medicine/BIPM/Faculty/Pages/Catherine-Lozupone,-PhD.aspx
+A successor to DADA, Divisive Amplicon  Denoising Algorithm, DADA2 is a tool for correcting errors in Illimuna amplicon data. Many researchers are handling the issues of amplicon errors with OTU clustering, however; the authors feel important real variations may be getting lost. DADA2 was tested against several similar methods such as Mothur, and the authors found that it the most accurate. 
 
+
+10.  DeSantis, et al. “Greengenes, a Chimera-Checked 16S rRNA Gene Database and Workbench Compatible with ARB” Applied and Environmental Microbiology. Jul 2006, Vol. 72, Issue 7, pp 5069-5072
+
+At the time of the paper there was a major issue with public sequence databases having a large number of chimeric sequences. When using PCR methods the sequence fragments must be aligned and rejoined to make longer sequences, but if done improperly a sequence made from unrelated contigs can be created, a chimera. Once the chimera is out there, others may try to align data to the sequence of this nonexistent creature. To resolve this issue, the authors have created a new database that checks data for chimeras, while also providing standard alignment, and taxonomic classification. The chimera checking algorithm is based on Bellerophon, but with modifications that make it significantly faster to run and provide a divergence ratio. DeSantis and Hugenholtz have worked on many tools in the field. DeSantic worked on NAST and PyNAST and has six publications with more than 1000 citations. Hugenholtz worked on the original Bellerophon that was adapted as part of this project as well as CheckM, NAST, and CRISPR. He has a dozen publications with over 1000 citations each. Clearly these authors are good tool makers in the field.
+
+11. Rideout, Jai Ram et al. “Subsampled open-reference clustering creates consistent, comprehensive OUT definitions and scales to billions of sequences” PeerJ. 2014, eCollection e545
+
+Several familiar names from the field including Rideout, Knight, and Caporaso contributed to
+this paper on a technique for OTU clustering. Closed reference OTU clustering is fast and aligns
+sequences to a reference database. However, any novel sequences that do not align are thrown away. The alternative is De Novo clustering, which clusters sequences by comparing them to each other instead of references. But this method is very slow because the comparisons can not be easily done in parallel, so it is not reasonable to use this on large data sets. One strategy to get the best of both options is open-reference picking, where first Closed Reference OTU picking is done, and the novel sequences that remain are then de novo clustered. However, in sets with a large number of novel sequences this can still be too slow. The authors have suggested a new strategy to speed this up. After the initial closed reference run, a subsample of the remaining sequences is de novo clustered. Then the remaining sequences are close reference clustered using the new OTUs from the subsample. This can be repeated
+as necessary, allowing for the benefits of open reference OTU picking with faster results. The authors ran several comparison test and found their results align well with existing methods, with improved runtimes in datasets with many novel OTUs. Since these authors are some of the common writers in the field we have good reason to trust their results.
+
+12. Lozupone, Catherine et al. UniFrac: A Phylogenetic Method for Comparing Microbial Communities. Applied and Environmental Microbiology, Dec 2005, Vol. 71, Issue 12, pp. 8228-8235
+
+This work introduces a new tool and metric for measuring and comparing diversity in microbial communities called UniFrac. The metric, called unique fraction metric, measures phylogenetic distance.  This will better determine if environments are similar or distinct than just comparing the OTUs alone, as different OTUs will still share many branches in similar communities but have more evolutionary diversity in others. To display their new tool and metric, a comparison was made between cultured and uncultured samples of sea water, sea ice, and sediment. Using UniFrac they determined that where different OTUs live was less effected by geography than by the environment type. This could not have been determined without a measurement made for comparing large numbers of sequences from extremely different geographic locations and environments, perfectly demonstrating an example use case for their new tool.  Knight was a professor at University of Colorado at Boulder when Lozupone was a pre-doctoral student. She has since continued to work in the field and now has her own faculty position1.
+
+13. Lozupone, Catherine et al. Quantitative and Qualitative β Diversity Measure Lead to Different Insights into Factors That Structure Microbial Communities. Applied and Environmental Microbiology, Feb 2007, Vol. 73, Issue 5, pp 1576-1585
+
+The creators of UniFrac return along with other researchers to introduce a new metric added to the UniFrac tool. The added metric, weighted UniFrac, modifies the original unweighted UniFrac to factor in quantitative measures of β diversity, while leaving the original metric available to measure qualitative diversity. The authors reproduced existing studies to demonstrate both the validity of the new weighted UniFrac measure and possible use cases for both weighted and unweighted UniFrac metrics. The first study reproduced was of geothermal vents from Yellowstone with data from a 2007 paper by Mathur et al. Weighted UniFrac agreed with the original paper’s quantitative metric that the temperature was not as important of a factor for diversity as the minerals available. The unweighted version, measuring only the phylogenetic difference in OTUs without considering their frequency, favored temperature as the more important factor. The second study reproduced shows another case where unweighted and weighted UniFrac show unique insights; examining the composition of microbiota in the guts of healthy and overweight mice with data from Ley et al (2005). Weighted UniFrac clustered the sequences by the mice obesity phenotypes, however unweighted UniFrac clustered them by their hereditary relationships. Quantitative and qualitative measures are both useful and having both makes UniFrac an even more powerful tool. 
+
+14. Rognes, Torbjorn et al. “VSEARCH: a versatile open source tool for metagenomics” PeerJ, 2016, 4:e2584 eCollection 2016.
+
+VSEARCH was created as an alternative to USEARCH. USEARCH was a useful and popular tool but was closed source and was not entirely free to use. VSEARCH allows users to detect chimeras, search, cluster by similarity, dereplicate, and more. It is free and open source, making it a superior tool for academics and anyone interested in more open science and software. 
+15. Price, Morgan et al. “FastTree 2 – Approximately Maximum-Likelihood Trees for Large Alignments”
+
+FastTree 1 was a scalable way to quickly make phylogenic trees. It was a minimum evolution method, which is very fast, but not as accurate as maximum likelihood methods. FastTree 2 first uses a minimum evolution algorithm, then uses maximum likelihood nearest neighbor interchanges to improve the tree. FastTree 2 is an “an approximately-maximum-likelihood method.” It is sill less accurate than true maximum likelihood approaches, but remains accurate enough for many uses with impressive speed that can be used on large datasets. 
+
+16. Katoh, Kazutaka and Standley, Daron. “ArticleFast TrackMAFFT Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usability” Molecular Biology and Evolution, 2013, Vol 30, Issue 4, pp 772-780
+
+The original MAFFT program from 2002 is a multiple sequence alignment tool. Version 7 is a large enough update to warrant a new paper. New features have been added such as the ability to add unaligned sequences to an existing alignment. Each new feature is described here with examples. It is great to see authors continuing to support and improve their work so many years later. 
+
+17. Bokulich, Nikolas et al. “Quality-filtering vastly improves diversity estimates from Illumina amplicon sequencing” Nature Methods, 2012, Vol. 10, Issue 1, pp 57-59
+
+The authors created a strategy for improving the quality of Illumina amplicon data. As sequencing becomes faster, easier, and cheaper more data is being produced, and more data with errors is being produced. These paper outlines the tests used to produce the quality guidelines used by the Earth Microbiome Project. 
+
+
+Annotation references and additional data type references
+
+•	Google Scholar https://scholar.google.com/
+•	Editorial Board. Microbiome. https://microbiomejournal.biomedcentral.com/about/editorial-board
+•	Antonio González Peña. About my research. https://sites.google.com/site/antgonza/
+•	Catherine Lozupone PhD “School of Medicine Biomedical Informatics and Personalized Medicine” University of Colorado Anshutz Campus http://www.ucdenver.edu/academics/colleges/medicalschool/departments/medicine/BIPM/Faculty/Pages/Catherine-Lozupone,-PhD.aspx
+•	McDonald, Daniel et al. “The Biological Observation Matrix (BIOM) format or: how I learned to stop worrying and love the ome-ome.” Gigascience. 2012, Vol 1, Issue 1, p 7
+•	McKinney, Wes. “Data Structures for Statistical Computing in Python” PROC. OF THE 9th PYTHON IN SCIENCE CONF, 2010
+•	Chang, Qin et al. “Variance adjusted weighted UniFrac: a powerful beta diversity measure for comparing communities based on phylogeny” BMC Bioinformatics, 2011, Vol. 12, pp118
+•	Chen, Jun et al. “Associating microbiome composition with environmental covariates using generalized UniFrac distances” Bioinformatics, 2012, Vol. 28 Issue 16, pp 2106–2113.
+•	McDonald, Daniel et al. “Striped UniFrac: enabling microbiome analysis at unprecedented scale” Nature Methods, 2018, Volume 15, pp 847–848 
+•	Weiss, Sophie “Normalization and microbial differential abundance strategies depend upon data characteristics” Microbiome, 2017, Vol. 5, Issue 27
+•	Lane, DJ. “Nucleic Acid Techniques in Bacterial Systematics 16S/23S sequencing”, 1991 pp115-175
